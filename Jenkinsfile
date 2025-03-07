@@ -8,14 +8,14 @@ pipeline {
                 sh 'echo $BUILD_ID'
             }
         }
-        stage('pwd command') {
+        stage('test') {
             steps{
-                sh 'pwd'
+                sh 'echo test'
             }
         }
         stage('ls command') {
             steps{
-                sh 'ls'
+                sh 'pwd'
             }
         }
     }
