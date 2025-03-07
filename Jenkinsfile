@@ -13,9 +13,9 @@ pipeline {
                 sh 'echo test'
             }
         }
-        stage('ls command') {
+        stage('deploy') {
             steps{
-                sh 'pwd'
+                sh 'docker -v'
             }
         }
     }
