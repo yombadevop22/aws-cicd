@@ -16,7 +16,7 @@ pipeline {
         stage('deploy') {
             steps{
                 sh 'docker -v'
-                sh 'cat /etc/os-release/'
+                sh 'cat /etc/os-release'
             }
         }
         stage('DockerBuild') {
