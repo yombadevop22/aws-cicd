@@ -22,7 +22,8 @@ pipeline {
         stage('DockerBuild') {
             steps{
                 sh 'docker build -t httpd'
-                sh 'docker images'
+                sh 'docker ps'
+                sh 'docker ps'
             }
         }
     }
