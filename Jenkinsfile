@@ -19,5 +19,11 @@ pipeline {
                 sh 'cat /etc/os-release/'
             }
         }
+        stage('DockerBuild') {
+            steps{
+                sh 'docker build -t httpd'
+                sh 'docker images'
+            }
+        }
     }
 }
