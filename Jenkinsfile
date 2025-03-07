@@ -23,7 +23,7 @@ pipeline {
             steps{
                 sh 'docker build -t httpd'
                 sh 'docker ps'
-                sh 'docker ps'
+                sh 'docker images'
             }
         }
     }
