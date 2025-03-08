@@ -3,27 +3,14 @@ pipeline {
     agent any
 
     stages{
-        stage('build') {
+        stage('git checkout') {
             steps{
-                sh 'echo $BUILD_ID'
+              git branch: 'main', url: 'https://github.com/yombadevop22/aws-cicd.git'
             }
         }
         stage('test') {
             steps{
                 sh 'echo test'
-            }
-        }
-        stage('deploy') {
-            steps{
-                sh 'docker -v'
-                sh 'cat /etc/os-release'
-            }
-        }
-        stage('DockerBuild') {
-            steps{
-                sh 'docker build -t httpd'
-                sh 'docker ps'
-                sh 'docker images'
             }
         }
     }
